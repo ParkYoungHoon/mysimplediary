@@ -2,6 +2,7 @@ import './App.css';
 import React, { useRef, useState } from "react";
 import DiaryEditor from "./components/DiaryEditor";
 import DiaryList from "./components/DiaryList";
+import Lifecycle from "./components/Lifecycle";
 
 function App() {
   const [data, setData] = useState([]);
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <div className="App">
+      <Lifecycle />
       <DiaryEditor onCreate={onCreate} />
       <DiaryList diaryList={data} onRemove={onRemove} onEdit={onEdit} />
     </div>
